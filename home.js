@@ -15,6 +15,14 @@ addMoney.addEventListener('click', function(e){
             const sum = convertedAmount + convertedTaka
             document.getElementById('taka').innerText = sum
 
+
+            const history = document.getElementById("history");
+            const p = document.createElement('p')
+            
+            p.innerText = `
+                Added ${convertedAmount} from ${account} account
+            `
+            history.appendChild(p)
         }
         else{
             alert('pin tik kor')
